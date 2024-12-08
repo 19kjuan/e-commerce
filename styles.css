@@ -1,0 +1,110 @@
+/* Estilos personalizados */
+:root {
+    --primary-color: #7c5c3c;
+    --secondary-color: #d4b08c;
+    --accent-color: #e8d5c4;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #faf6f1;
+  }
+  
+  .navbar {
+    background-color: var(--primary-color);
+  }
+  
+  .hero-section {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('https://images.unsplash.com/photo-1599589915468-b4c71ed62543?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+  }
+  
+  .product-card {
+    transition: transform 0.3s;
+    border: none;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .cart-icon {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    padding: 0.25em 0.6em;
+    font-size: 0.75rem;
+  }
+  
+  .footer {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in;
+  }
+  
+  /* Modal del carrito */
+  .cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    z-index: 1050;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .cart-modal.active {
+    display: block;
+  }
+  
+  .cart-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Categorías */
+  .category-card {
+    background: var(--accent-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+  }
+  
+  .category-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .main-section {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  #productosSection {
+    display: block; /* This will be shown by default */
+  }
